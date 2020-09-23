@@ -1,8 +1,6 @@
 ---
-title: 'How to Trump '
-output:
-  pdf_document: default
-  html_document: default
+title: 'What do supporters of Trump and Biden think about Trump as the president in the last four years?'
+output: html_document
 ---
 
 ```{r,include=FALSE}
@@ -19,13 +17,11 @@ biden20=pilot_data[pilot_data$vote20jb==2,]
 
 
 # Information about the data.
-We are conducting the data analysis using the **2020 Exploratory Testing Survey** dataset from ANES(American National Election Studies). The purpose of the survey is to gain more information on the novel issues arising in the election year.
 
-The pilot study was conducted via internet between Apr 10 and Apr 18. The survey collected 3,080 sample data. See more detail [here](https://electionstudies.org/data-center/2020-exploratory-testing-survey/).
+As the election 2020 is closer, the competition between Trump and Biden is becoming a hot topic in this special years. People all over the world pay attention on the results.
+This year many new issues happened, such as COVID-19, Black lives matters protest. We are conducting the data analysis using the **2020 Exploratory Testing Survey** dataset from ANES(American National Election Studies). Because the survey contains the information on the novel issues arising in the election year.The pilot study was conducted via internet between Apr 10 and Apr 18. The survey collected 3,080 sample data. See more detail [here](https://electionstudies.org/data-center/2020-exploratory-testing-survey/).
 
 From analyzing the data, we draw some interesting conclusions. Let's find out!
-
-
 
 # How many people have changed their minds?
 As we see the plot below, which shows us who people voted for in 2016 and will vote this year, we can draw a conclusion that most of the people keep a stand. Especially, Trump remain 87.86% of his supporter to support him this year again, while Biden remain 87.48%, which is less, of Clinton's supporter to support him this year.
@@ -67,8 +63,8 @@ par(mfrow=c(1,2),mar=c(6,4,5,1))
 hist(trump20$apppres7[trump20$apppres7<=7],xlab='Response',ylab='Frequence',main = 'Trump',cex.main=1,col="red")
 hist(biden20$apppres7[biden20$apppres7<=7],xlab='Response',ylab='Frequence',main = 'Biden',cex.main=1,col="blue")
 mtext("Do people approve Trump's way of handeling his job as president?", outer=TRUE,cex = 1,line=-1.5)
-mtext("1 - Approve extremely strongly, 2 - Approve moderately strongly, 3 - Approve slightly, 4 - Neither approve nor disapprove", outer=TRUE,cex = .8,line=-21.5)
-mtext("5 - Disapprove slightly, 6 - Disapprove moderately strongly, 7 - Disapprove extremely strongly", outer=TRUE,cex = .8,line=-22.5)
+mtext("1 - Approve extremely strongly, 2 - Approve moderately strongly, 3 - Approve slightly, 4 - Neither approve nor disapprove,
+      5 - Disapprove slightly, 6 - Disapprove moderately strongly, 7 - Disapprove extremely strongly", outer=TRUE,cex = .6,line=-25)
 ```
 
 
@@ -92,9 +88,9 @@ hist(biden20$econpres7[biden20$econpres7<=7],xlab='Biden',ylab='',main = '',col=
 hist(ifelse(trump20$covidpres7<=7,trump20$covidpres7,trump20$healthcarepres7),xlab='Trump',ylab='',main = '',col="red")
 hist(ifelse(biden20$covidpres7<=7,biden20$covidpres7,biden20$healthcarepres7),xlab='Biden',ylab='',main = '',col="blue")
 
-mtext("1 - Approve extremely strongly, 2 - Approve moderately strongly, 3 - Approve slightly, 4 - Neither approve nor disapprove", cex = .5,line=-14.2,adj = +1.5)
-mtext("5 - Disapprove slightly, 6 - Disapprove moderately strongly, 7 - Disapprove extremely strongly", cex = .5,adj=+2,line=-15)
-mtext("International Relations", cex = 1,line=17.5,adj=+180)
+mtext("1 - Approve extremely strongly, 2 - Approve moderately strongly, 3 - Approve slightly, 4 - Neither approve nor disapprove", cex = .5,line=-16.2,adj = +1.5)
+mtext("5 - Disapprove slightly, 6 - Disapprove moderately strongly, 7 - Disapprove extremely strongly", cex = .5,adj=+2,line=-17)
+mtext("International Relations", cex = 1,line=17.5,adj=+30)
 mtext("Immigration", cex = 1,line=17.5,adj=-.7)
 mtext("Economy", cex = 1,line=1.2,adj=-4.7)
 mtext("Health Care & Covid-19", cex = 1,line=1.2,adj=+5)
@@ -114,7 +110,7 @@ Let's find out.
 
 ## Economy
 
-###Do people think the economy is getting better or worse?
+### Do people think the economy is getting better or worse?
 
 In the survey, people were asked that "Compare to one year ago, whether you think that the nation's economy is now better, about the same, or worse? "
 Here are different group of people's response.
@@ -124,7 +120,7 @@ par(mfrow=c(1,2),mar=c(6,4,5,1))
 hist(trump20$econnow[trump20$econnow<=5],xlab = 'Response',main = 'Trump',cex.main=1,col="red")
 hist(biden20$econnow[biden20$econnow<=5],xlab = 'Response',main = 'Biden',cex.main=1,col="blue")
 mtext("Economy is now better or worse?",outer=TRUE, cex = 1.5,line=-1.5)
-mtext("1-Much better, 2-Somewhat better, 3-About the same, 4-Somewhat worse, 5-Much worse", outer=TRUE,cex = .8,line=-21.5)
+mtext("1-Much better, 2-Somewhat better, 3-About the same, 4-Somewhat worse, 5-Much worse", outer=TRUE,cex = .8,line=-24.5)
 ```
 
 
@@ -139,9 +135,9 @@ hist(biden20$finworry[biden20$finworry<=5],xlab = 'Response',main = 'Biden',cex.
 hist(trump20$confecon[trump20$confecon<=5],xlab = 'Response',main = 'Trump',cex.main=1,col="red")
 hist(biden20$confecon[biden20$confecon<=5],xlab = 'Response',main = 'Biden',cex.main=1,col="blue")
 
-mtext("1 - Not at all worried, 2 - A little worried, 3 - Moderately worried, 4 - Very worried, 5 - Extremely worried", cex = .7,line = -9.5, adj=1.3)
-mtext("The level of worry about people's current financial situation", cex = 1,line=+16,adj=2.1)
-mtext("The level of worry about the national economy", cex = 1,line=+3.5,adj=16)
+mtext("1 - Not at all worried, 2 - A little worried, 3 - Moderately worried, 4 - Very worried, 5 - Extremely worried", cex = .7,line = -11, adj=1.3)
+mtext("The level of worry about people's current financial situation", cex = 1,line=+18,adj=2.1)
+mtext("The level of worry about the national economy", cex = 1,line=+3.5,adj=5)
 
 
 ```
@@ -152,14 +148,14 @@ In addition, Biden's supporters are concerned about both their current financial
 Maybe it is because Trump's supporters are richer than Biden's.
 Let's take a look at their income levels.
 
-### Income level and the income differences between the rich and the poor.
+### Income level & income differences
 
 ```{r}
 par(mfrow=c(1,2),mar=c(4,4,4,0))
 hist(ifelse(trump20$inc_anes==66, ifelse(trump20$inc_cps==66,trump20$inc_cpsmod,trump20$inc_cps),trump20$inc_anes),xlim=c(1,30),breaks=25,xlab='',main='Trump',col="red")
 hist(ifelse(biden20$inc_anes==66, ifelse(biden20$inc_cps==66,biden20$inc_cpsmod,biden20$inc_cps),biden20$inc_anes),xlim=c(1,30),breaks=25,xlab='',main='Biden',col="blue")
 mtext("The anual income levels", cex = 1,line=+3,adj=-1.4)
-mtext("[1-5] (Under $24,999), [6-10] - ($25,000 - $49,999), [11-15] - ($50,000 - $74,999), [16-20] - ($75,000 - $99,999), [21-25] - ($100,000 - $249,999), [26-30] - ($250,000 or more)",cex=0.5,line = -18,adj=+1.1)
+mtext("[1-5] (Under $24,999), [6-10] - ($25,000 - $49,999), [11-15] - ($50,000 - $74,999), [16-20] - ($75,000 - $99,999), [21-25] - ($100,000 - $249,999), [26-30] - ($250,000 or more)",cex=0.5,line = -20,adj=+1.1)
 
 ```
 
@@ -174,8 +170,8 @@ par(mfrow=c(1,2))
 hist(trump20$richpoor2[trump20$richpoor2<=5],xlab='',main='Trump',col="red",cex.main=.7)
 hist(biden20$richpoor2[biden20$richpoor2<=5],xlab='',main='Biden',col="Blue",cex.main=.7)
 
-mtext("The importance of reducing income differences", cex = 1,line=+1.3,adj=+2.2)
-mtext("1 - Extremely important, 2 - Very important, 3 - Moderately important, 4 - A little important, 5 - Not at all important",cex=.8,line = -19,adj=+1)
+mtext("The importance of reducing income differences", cex = 1,line=+3.3,adj=+2.2)
+mtext("1 - Extremely important, 2 - Very important, 3 - Moderately important, 4 - A little important, 5 - Not at all important",cex=.6,line = -19,adj=+1.3)
 
 ```
 
@@ -189,9 +185,9 @@ In the survey, people are asked to share their opinions about which one do they 
 par(mfrow=c(1,2))
 hist(trump20$freemkt1a[trump20$freemkt1a<=2],breaks=2,main='Trump',col="red",cex.main=.7,xlab='',xaxt='n',)
 hist(biden20$freemkt1a[biden20$freemkt1a<=2],breaks=2,main='Biden',col="Blue",cex.main=.7,xlab='',xaxt='n')
-mtext("Free Market VS Strong Market", cex = 1,line=+1.3,adj=-10)
-mtext("Government",cex=1,line = -10,adj=-2.25,col="white")
-mtext("Free market",cex=1,line = -10,adj=-1.5,col="white")
+mtext("Free Market VS Strong Market", outer=TRUE,cex = 1,line=-1)
+mtext("Government",cex=1,line = -10,adj=-2.5,col="white")
+mtext("Free market",cex=1,line = -10,adj=-1.7,col="white")
 mtext("Government",cex=1,line = -10,adj=+.13,col="white")
 mtext("Free market",cex=1,line = -14,adj=+.87,col="white")
 ```
@@ -203,15 +199,23 @@ According to the plot, Biden's supporters prefer more about a strong government.
 
 In the previous part of the analysis, we find that some of Trump's supporters dislike his policy in **Health Care & COVID-19**.
 
+Let's take a look at what do American think about the Health Care and COVID-19.
+
+In the survey, we find that Trump's supporters are not as worried about their chances of getting COVID-19 as Biden's supporters.
+See the following plot.
 
 ```{r}
 par(mfrow=c(1,2),mar=c(6,4,5,1))
 hist(trump20$covid1[trump20$covid1<=5],xlab = 'Response',main = 'Trump',cex.main=1,col="red")
 hist(biden20$covid1[biden20$covid1<=5],xlab = 'Response',main = 'Biden',cex.main=1,col="blue")
 mtext("How worried are you about getting COVID-19?",outer=TRUE, cex = 1.5,line=-1.5)
-mtext("1 - Extremely worried, 2 - Very worried, 3 - Moderately worried, 4 - A little worried, 5 - Not at all worried", outer=TRUE,cex = .8,line=-22)
+mtext("1 - Extremely worried, 2 - Very worried, 3 - Moderately worried, 4 - A little worried, 5 - Not at all worried", outer=TRUE,cex = .8,line=-24)
 ```
 
+However, it shows a big difference between Trump's supporters and Biden's supporters about their attitude towards whether government should pay for the health care of all Americans.
+Trump's camp oppose the idea a great deal, while a few of them do favor the idea. In the opposite, Biden's supporters favor the idea a great deal.
+
+The reason behind this maybe their difference in income.
 
 ```{r}
 par(mfrow=c(1,2),mar=c(6,4,5,1))
@@ -219,15 +223,32 @@ hist(trump20$hlthcare1[trump20$hlthcare1<=7],xlab = 'Response',main = 'Trump',ce
 hist(biden20$hlthcare1[biden20$hlthcare1<=7],xlab = 'Response',main = 'Biden',cex.main=1,col="blue",breaks = 10)
 mtext("Do you favor that the government is responsible for paying for the health care of all Americans?",outer=TRUE, cex = 1,line=-1.5)
 mtext("1 - Favor a great deal, 2 - Favor a moderate amount, 3 - Favor a little, 4 - Neither favor nor oppose, 5 - Oppose a little
-       6 - Oppose a moderate amount, 7 - Oppose a great deal", outer=TRUE,cex = .8,line=-22.5)
+       6 - Oppose a moderate amount, 7 - Oppose a great deal", outer=TRUE,cex = .8,line=-25)
 
 ```
 
-#Conclusion
+# Conclusion
 
 From the survey, we learn about some interesting findings.
 
-## What do american think about the Trump's work in the last four years.
+1. With a heatmap showing the percentage of people and their voting in 2016 and 2020, we find some ideas:
+   + There are a few people changed their minds during the four years, while most of them keep a stand. 
+   + Comparing the two major candidates, Trump and Biden, we find that Biden is more attractive to those who quit voting in 2016 and those who vote someone else other than Clinton and Trump in 2016, however, Trump has a slightly higher possibility to keep most of the people who voted him in 2016 voting him again this year.
+
+2. Although it is obvious that Trump's supporters tend to favor Trump's job as the president in the last four years, we find something interesting.
+   + Biden's supporters seem to favor Trump's economy policy more than policy in other aspects, like Immigration, International Relations and Health Care & COVID-19.
+   + Trump's supporters are more likely to disagree the policy in Health Care & COVID-19 than policy in other aspects.
+
+3. As we focus on the economy field, we find out the reason of the previous part.
+   + Both group of people tend to believe that the economy is worse than the last year.
+   + Biden's supporters are more likely to be worried about both their current financial situation and the national economy, while Trump's supporters are more likely to be worried about the national economy than their current financial.
+   + We find evidence that Biden's supporters have a larger group of people with lower annual income than Trump's supporters, which supports the previous point.
+   + Also, there is a difference between the two groups of people's opinion on whether government should pay attention on reducing income differences between the poor and the rich. Biden's supporters are more likely to favor the idea that government should pass regulations and laws to reduce the income differences than the other group of people. The reason of it maybe the fact that Trump's supporters are richer than Biden's, stated as the previous point.
+   + Trump's supporters favor free market more than Biden's supporters. This could explain the reason of the point stated in the point 2 that Biden's supporters favor Trump's economy policy more. Because during the last four years, Trump took many actions on governing the economy, and Biden's supporters favor a stronger government than a free market to handel the economic problems.
+
+4. The two group of people show some differences on the Health Care & COVID-19 field.
+   + Biden's supporters are worried about getting COVID-19.
+   + Biden's supporters agree with the idea that government should be responsible for paying the health care for all Americans, while most of the Trump's supporters extremely oppose the idea.
 
 
 

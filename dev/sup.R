@@ -29,3 +29,31 @@
 # ggplot(pilot_data,aes(fill=))
 
 heatmap.2(t(as.matrix(vote_heat)),dendrogram='none',Rowv = FALSE,Colv= FALSE,trace = 'none',col=colorRampPalette(c("#BBFFFF","#00868B")))
+
+```{r}
+par(mfrow=c(2,2))
+hist(trump20$taxecon[trump20$taxecon<=7])
+hist(biden20$taxecon[biden20$taxecon<=7])
+
+hist(ifelse(trump20$billtax1==88,trump20$billtax2,trump20$billtax1))
+hist(ifelse(biden20$billtax1==88,biden20$billtax2,biden20$billtax1))
+
+hist(ifelse(trump20$guarinc1==88,trump20$guarinc2,trump20$guarinc1))
+hist(ifelse(biden20$guarinc1==88,biden20$guarinc2,biden20$guarinc1))
+
+
+
+
+par(mfrow=c(2,2))
+hist(trump20$govsize1a[trump20$govsize1a<=2],breaks=2)
+hist(biden20$govsize1a[biden20$govsize1a<=2],breaks=2)
+
+hist( ifelse(trump20$govsize2==66,trump20$govsize3,trump20$govsize2)[trump20$govsize1a==8],xlim=c(1,7),breaks=100)
+hist( ifelse(biden20$govsize2==66,biden20$govsize3,biden20$govsize2)[biden20$govsize1a==8],xlim=c(1,7),breaks=7)
+
+par(mfrow=c(3,2))
+hist(trump20$regulate1[trump20$regulate1<=5])
+hist(biden20$regulate1[biden20$regulate1<=5])
+
+hist(trump20$regulate2[trump20$regulate2<=7])
+hist(biden20$regulate2[biden20$regulate2<=7])

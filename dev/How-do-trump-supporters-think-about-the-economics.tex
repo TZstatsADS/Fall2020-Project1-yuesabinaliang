@@ -1,0 +1,401 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={How to Trump},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+\title{How to Trump}
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+\maketitle
+
+\hypertarget{information-about-the-data.}{%
+\section{Information about the
+data.}\label{information-about-the-data.}}
+
+We are conducting the data analysis using the \textbf{2020 Exploratory
+Testing Survey} dataset from ANES(American National Election Studies).
+The purpose of the survey is to gain more information on the novel
+issues arising in the election year.
+
+The pilot study was conducted via internet between Apr 10 and Apr 18.
+The survey collected 3,080 sample data. See more detail
+\href{https://electionstudies.org/data-center/2020-exploratory-testing-survey/}{here}.
+
+From analyzing the data, we draw some interesting conclusions. Let's
+find out!
+
+\hypertarget{how-many-people-have-changed-their-minds}{%
+\section{How many people have changed their
+minds?}\label{how-many-people-have-changed-their-minds}}
+
+As we see the plot below, which shows us who people voted for in 2016
+and will vote this year, we can draw a conclusion that most of the
+people keep a stand. Especially, Trump remain 87.86\% of his supporter
+to support him this year again, while Biden remain 87.48\%, which is
+less, of Clinton's supporter to support him this year.
+
+However, some people have changed their minds. From the plot we can see,
+more people change from Trump's camp to Biden's than from Biden's group
+to Trump's. But some of the Biden's camp leave to someone else's camp.
+Worth mentioning, Biden attracts more people who quit voting in 2016 to
+his camp this year than Trump does.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{vote_freq<-}\KeywordTok{as.data.frame}\NormalTok{(}\KeywordTok{table}\NormalTok{(pilot_data[,}\KeywordTok{c}\NormalTok{(}\StringTok{'vote16'}\NormalTok{,}\StringTok{'vote20jb'}\NormalTok{)]))}
+\NormalTok{total16<-}\KeywordTok{as.data.frame}\NormalTok{(}\KeywordTok{table}\NormalTok{(pilot_data[,}\KeywordTok{c}\NormalTok{(}\StringTok{'vote16'}\NormalTok{)]))}
+\NormalTok{vote_heat<-}\KeywordTok{as.data.frame}\NormalTok{(}\KeywordTok{matrix}\NormalTok{(}\KeywordTok{c}\NormalTok{(vote_freq[vote_freq}\OperatorTok{$}\NormalTok{vote20jb}\OperatorTok{==}\DecValTok{1}\NormalTok{,}\StringTok{'Freq'}\NormalTok{],}
+\NormalTok{             vote_freq[vote_freq}\OperatorTok{$}\NormalTok{vote20jb}\OperatorTok{==}\DecValTok{2}\NormalTok{,}\StringTok{'Freq'}\NormalTok{],}
+\NormalTok{             vote_freq[vote_freq}\OperatorTok{$}\NormalTok{vote20jb}\OperatorTok{==}\DecValTok{3}\NormalTok{,}\StringTok{'Freq'}\NormalTok{],}
+\NormalTok{             vote_freq[vote_freq}\OperatorTok{$}\NormalTok{vote20jb}\OperatorTok{==}\DecValTok{4}\NormalTok{,}\StringTok{'Freq'}\NormalTok{],}
+\NormalTok{             vote_freq[vote_freq}\OperatorTok{$}\NormalTok{vote20jb}\OperatorTok{==}\DecValTok{9}\NormalTok{,}\StringTok{'Freq'}\NormalTok{]),}\DecValTok{5}\NormalTok{,}\DecValTok{5}\NormalTok{))[}\DecValTok{1}\OperatorTok{:}\DecValTok{4}\NormalTok{,}\DecValTok{1}\OperatorTok{:}\DecValTok{4}\NormalTok{]}
+\NormalTok{vote_heat[}\DecValTok{1}\NormalTok{,]<-vote_heat[}\DecValTok{1}\NormalTok{,]}\OperatorTok{/}\NormalTok{total16[}\DecValTok{1}\NormalTok{,}\DecValTok{2}\NormalTok{]}\OperatorTok{*}\DecValTok{100}
+\NormalTok{vote_heat[}\DecValTok{2}\NormalTok{,]<-vote_heat[}\DecValTok{2}\NormalTok{,]}\OperatorTok{/}\NormalTok{total16[}\DecValTok{2}\NormalTok{,}\DecValTok{2}\NormalTok{]}\OperatorTok{*}\DecValTok{100}
+\NormalTok{vote_heat[}\DecValTok{3}\NormalTok{,]<-vote_heat[}\DecValTok{3}\NormalTok{,]}\OperatorTok{/}\NormalTok{total16[}\DecValTok{3}\NormalTok{,}\DecValTok{2}\NormalTok{]}\OperatorTok{*}\DecValTok{100}
+\NormalTok{vote_heat[}\DecValTok{4}\NormalTok{,]<-vote_heat[}\DecValTok{4}\NormalTok{,]}\OperatorTok{/}\NormalTok{total16[}\DecValTok{4}\NormalTok{,}\DecValTok{2}\NormalTok{]}\OperatorTok{*}\DecValTok{100}
+\KeywordTok{colnames}\NormalTok{(vote_heat)<-}\KeywordTok{c}\NormalTok{(}\StringTok{'Trump_20'}\NormalTok{,}\StringTok{'Biden_20'}\NormalTok{,}\StringTok{'Else_20'}\NormalTok{,}\StringTok{'Quit_20'}\NormalTok{)}
+\KeywordTok{rownames}\NormalTok{(vote_heat)<-}\KeywordTok{c}\NormalTok{(}\StringTok{'Trump_16'}\NormalTok{,}\StringTok{'Clinton_16'}\NormalTok{,}\StringTok{'Else_16'}\NormalTok{,}\StringTok{'Quit_16'}\NormalTok{)}
+\KeywordTok{par}\NormalTok{(}\DataTypeTok{mar=}\KeywordTok{c}\NormalTok{(}\FloatTok{5.1}\NormalTok{,}\FloatTok{4.1}\NormalTok{,}\FloatTok{4.1}\NormalTok{,}\FloatTok{4.1}\NormalTok{))}
+\KeywordTok{plot}\NormalTok{(}\KeywordTok{as.matrix}\NormalTok{(vote_heat),}\DataTypeTok{col =} \KeywordTok{colorRampPalette}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\StringTok{"white"}\NormalTok{,}\StringTok{"red"}\NormalTok{)),}\DataTypeTok{breaks=}\DecValTok{1000}\NormalTok{,}\DataTypeTok{fmt.cell=}\StringTok{'%.2f'}\NormalTok{,}\DataTypeTok{text.cell =} \KeywordTok{list}\NormalTok{(}\DataTypeTok{cex=}\DecValTok{1}\NormalTok{),}\DataTypeTok{key=}\OtherTok{NULL}\NormalTok{,}\DataTypeTok{cex.axis=}\NormalTok{.}\DecValTok{75}\NormalTok{,}\DataTypeTok{axis.row =} \KeywordTok{list}\NormalTok{(}\DataTypeTok{las=}\DecValTok{1}\NormalTok{),}\DataTypeTok{ylab=}\StringTok{''}\NormalTok{,}\DataTypeTok{xlab=}\StringTok{''}\NormalTok{,}\DataTypeTok{main=}\StringTok{'What is the current attitude of Americans who voted in 2016? (%)'}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{How-do-trump-supporters-think-about-the-economics_files/figure-latex/unnamed-chunk-2-1.pdf}
+
+\hypertarget{so-how-well-did-trump-do-his-job-as-the-president-in-the-last-four-years}{%
+\section{So how well did Trump do his job as the president in the last
+four
+years?}\label{so-how-well-did-trump-do-his-job-as-the-president-in-the-last-four-years}}
+
+We would like to figure out `What do Americans think about Trump's job
+as the president in the last four years?'.
+
+So, we split the data into two parts, people who vote Trump this year
+and people who vote Biden this year. Let's see how do they rate Trump's
+work in various fields.
+
+Surely, Biden's supporters tend to dislike Trump's work. But we still
+find something interesting by comparing the opinions of the two groups.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{par}\NormalTok{(}\DataTypeTok{mfrow=}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{2}\NormalTok{),}\DataTypeTok{mar=}\KeywordTok{c}\NormalTok{(}\DecValTok{6}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{5}\NormalTok{,}\DecValTok{1}\NormalTok{))}
+\KeywordTok{hist}\NormalTok{(trump20}\OperatorTok{$}\NormalTok{apppres7[trump20}\OperatorTok{$}\NormalTok{apppres7}\OperatorTok{<=}\DecValTok{7}\NormalTok{],}\DataTypeTok{xlab=}\StringTok{'Response'}\NormalTok{,}\DataTypeTok{ylab=}\StringTok{'Frequence'}\NormalTok{,}\DataTypeTok{main =} \StringTok{'Trump'}\NormalTok{,}\DataTypeTok{cex.main=}\DecValTok{1}\NormalTok{,}\DataTypeTok{col=}\StringTok{"red"}\NormalTok{)}
+\KeywordTok{hist}\NormalTok{(biden20}\OperatorTok{$}\NormalTok{apppres7[biden20}\OperatorTok{$}\NormalTok{apppres7}\OperatorTok{<=}\DecValTok{7}\NormalTok{],}\DataTypeTok{xlab=}\StringTok{'Response'}\NormalTok{,}\DataTypeTok{ylab=}\StringTok{'Frequence'}\NormalTok{,}\DataTypeTok{main =} \StringTok{'Biden'}\NormalTok{,}\DataTypeTok{cex.main=}\DecValTok{1}\NormalTok{,}\DataTypeTok{col=}\StringTok{"blue"}\NormalTok{)}
+\KeywordTok{mtext}\NormalTok{(}\StringTok{"Do people approve Trump's way of handeling his job as president?"}\NormalTok{, }\DataTypeTok{outer=}\OtherTok{TRUE}\NormalTok{,}\DataTypeTok{cex =} \DecValTok{1}\NormalTok{,}\DataTypeTok{line=}\OperatorTok{-}\FloatTok{1.5}\NormalTok{)}
+\KeywordTok{mtext}\NormalTok{(}\StringTok{"1 - Approve extremely strongly, 2 - Approve moderately strongly, 3 - Approve slightly, 4 - Neither approve nor disapprove"}\NormalTok{, }\DataTypeTok{outer=}\OtherTok{TRUE}\NormalTok{,}\DataTypeTok{cex =} \FloatTok{.8}\NormalTok{,}\DataTypeTok{line=}\OperatorTok{-}\FloatTok{21.5}\NormalTok{)}
+\KeywordTok{mtext}\NormalTok{(}\StringTok{"5 - Disapprove slightly, 6 - Disapprove moderately strongly, 7 - Disapprove extremely strongly"}\NormalTok{, }\DataTypeTok{outer=}\OtherTok{TRUE}\NormalTok{,}\DataTypeTok{cex =} \FloatTok{.8}\NormalTok{,}\DataTypeTok{line=}\OperatorTok{-}\FloatTok{22.5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{How-do-trump-supporters-think-about-the-economics_files/figure-latex/unnamed-chunk-3-1.pdf}
+
+From the plot, we see that more Trump's supporters approve Trump's job
+moderately, while Biden's supporters disapprove Trump's job extremely.
+
+What about people's opinions on Trump's job about \textbf{International
+Relations}, \textbf{Immigration}, \textbf{Economy} and \textbf{Health
+Care \& Covid-19}? The survey asked people to express their opinions and
+we can see the difference as the plot below.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{par}\NormalTok{(}\DataTypeTok{mfrow=}\KeywordTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{,}\DecValTok{4}\NormalTok{),}\DataTypeTok{mar=}\KeywordTok{c}\NormalTok{(}\DecValTok{6}\NormalTok{,}\DecValTok{2}\NormalTok{,}\DecValTok{2}\NormalTok{,}\DecValTok{0}\NormalTok{))}
+\KeywordTok{hist}\NormalTok{(trump20}\OperatorTok{$}\NormalTok{frnpres7[trump20}\OperatorTok{$}\NormalTok{frnpres7}\OperatorTok{<=}\DecValTok{7}\NormalTok{],}\DataTypeTok{xlab=}\StringTok{'Trump'}\NormalTok{,}\DataTypeTok{ylab=}\StringTok{''}\NormalTok{,}\DataTypeTok{main =} \StringTok{''}\NormalTok{,}\DataTypeTok{col=}\StringTok{"red"}\NormalTok{)}
+\KeywordTok{hist}\NormalTok{(biden20}\OperatorTok{$}\NormalTok{frnpres7[biden20}\OperatorTok{$}\NormalTok{frnpres7}\OperatorTok{<=}\DecValTok{7}\NormalTok{],}\DataTypeTok{xlab=}\StringTok{'Biden'}\NormalTok{,}\DataTypeTok{ylab=}\StringTok{''}\NormalTok{,}\DataTypeTok{main =} \StringTok{''}\NormalTok{,}\DataTypeTok{col=}\StringTok{"blue"}\NormalTok{)}
+
+\KeywordTok{hist}\NormalTok{(trump20}\OperatorTok{$}\NormalTok{immpres7[trump20}\OperatorTok{$}\NormalTok{immpres7}\OperatorTok{<=}\DecValTok{7}\NormalTok{],}\DataTypeTok{xlab=}\StringTok{'Trump'}\NormalTok{,}\DataTypeTok{ylab=}\StringTok{''}\NormalTok{,}\DataTypeTok{main =} \StringTok{''}\NormalTok{,}\DataTypeTok{col=}\StringTok{"red"}\NormalTok{)}
+\KeywordTok{hist}\NormalTok{(biden20}\OperatorTok{$}\NormalTok{immpres7[biden20}\OperatorTok{$}\NormalTok{immpres7}\OperatorTok{<=}\DecValTok{7}\NormalTok{],}\DataTypeTok{xlab=}\StringTok{'Biden'}\NormalTok{,}\DataTypeTok{ylab=}\StringTok{''}\NormalTok{,}\DataTypeTok{main =} \StringTok{''}\NormalTok{,}\DataTypeTok{col=}\StringTok{"blue"}\NormalTok{)}
+
+\KeywordTok{hist}\NormalTok{(trump20}\OperatorTok{$}\NormalTok{econpres7[trump20}\OperatorTok{$}\NormalTok{econpres7}\OperatorTok{<=}\DecValTok{7}\NormalTok{],}\DataTypeTok{xlab=}\StringTok{'Trump'}\NormalTok{,}\DataTypeTok{ylab=}\StringTok{''}\NormalTok{,}\DataTypeTok{main =} \StringTok{''}\NormalTok{,}\DataTypeTok{col=}\StringTok{"red"}\NormalTok{)}
+\KeywordTok{hist}\NormalTok{(biden20}\OperatorTok{$}\NormalTok{econpres7[biden20}\OperatorTok{$}\NormalTok{econpres7}\OperatorTok{<=}\DecValTok{7}\NormalTok{],}\DataTypeTok{xlab=}\StringTok{'Biden'}\NormalTok{,}\DataTypeTok{ylab=}\StringTok{''}\NormalTok{,}\DataTypeTok{main =} \StringTok{''}\NormalTok{,}\DataTypeTok{col=}\StringTok{"blue"}\NormalTok{)}
+
+\KeywordTok{hist}\NormalTok{(}\KeywordTok{ifelse}\NormalTok{(trump20}\OperatorTok{$}\NormalTok{covidpres7}\OperatorTok{<=}\DecValTok{7}\NormalTok{,trump20}\OperatorTok{$}\NormalTok{covidpres7,trump20}\OperatorTok{$}\NormalTok{healthcarepres7),}\DataTypeTok{xlab=}\StringTok{'Trump'}\NormalTok{,}\DataTypeTok{ylab=}\StringTok{''}\NormalTok{,}\DataTypeTok{main =} \StringTok{''}\NormalTok{,}\DataTypeTok{col=}\StringTok{"red"}\NormalTok{)}
+\KeywordTok{hist}\NormalTok{(}\KeywordTok{ifelse}\NormalTok{(biden20}\OperatorTok{$}\NormalTok{covidpres7}\OperatorTok{<=}\DecValTok{7}\NormalTok{,biden20}\OperatorTok{$}\NormalTok{covidpres7,biden20}\OperatorTok{$}\NormalTok{healthcarepres7),}\DataTypeTok{xlab=}\StringTok{'Biden'}\NormalTok{,}\DataTypeTok{ylab=}\StringTok{''}\NormalTok{,}\DataTypeTok{main =} \StringTok{''}\NormalTok{,}\DataTypeTok{col=}\StringTok{"blue"}\NormalTok{)}
+
+\KeywordTok{mtext}\NormalTok{(}\StringTok{"1 - Approve extremely strongly, 2 - Approve moderately strongly, 3 - Approve slightly, 4 - Neither approve nor disapprove"}\NormalTok{, }\DataTypeTok{cex =} \FloatTok{.5}\NormalTok{,}\DataTypeTok{line=}\OperatorTok{-}\FloatTok{14.2}\NormalTok{,}\DataTypeTok{adj =} \FloatTok{+1.5}\NormalTok{)}
+\KeywordTok{mtext}\NormalTok{(}\StringTok{"5 - Disapprove slightly, 6 - Disapprove moderately strongly, 7 - Disapprove extremely strongly"}\NormalTok{, }\DataTypeTok{cex =} \FloatTok{.5}\NormalTok{,}\DataTypeTok{adj=}\OperatorTok{+}\DecValTok{2}\NormalTok{,}\DataTypeTok{line=}\OperatorTok{-}\DecValTok{15}\NormalTok{)}
+\KeywordTok{mtext}\NormalTok{(}\StringTok{"International Relations"}\NormalTok{, }\DataTypeTok{cex =} \DecValTok{1}\NormalTok{,}\DataTypeTok{line=}\FloatTok{17.5}\NormalTok{,}\DataTypeTok{adj=}\OperatorTok{+}\DecValTok{180}\NormalTok{)}
+\KeywordTok{mtext}\NormalTok{(}\StringTok{"Immigration"}\NormalTok{, }\DataTypeTok{cex =} \DecValTok{1}\NormalTok{,}\DataTypeTok{line=}\FloatTok{17.5}\NormalTok{,}\DataTypeTok{adj=}\OperatorTok{-}\NormalTok{.}\DecValTok{7}\NormalTok{)}
+\KeywordTok{mtext}\NormalTok{(}\StringTok{"Economy"}\NormalTok{, }\DataTypeTok{cex =} \DecValTok{1}\NormalTok{,}\DataTypeTok{line=}\FloatTok{1.2}\NormalTok{,}\DataTypeTok{adj=}\OperatorTok{-}\FloatTok{4.7}\NormalTok{)}
+\KeywordTok{mtext}\NormalTok{(}\StringTok{"Health Care & Covid-19"}\NormalTok{, }\DataTypeTok{cex =} \DecValTok{1}\NormalTok{,}\DataTypeTok{line=}\FloatTok{1.2}\NormalTok{,}\DataTypeTok{adj=}\OperatorTok{+}\DecValTok{5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{How-do-trump-supporters-think-about-the-economics_files/figure-latex/unnamed-chunk-4-1.pdf}
+
+From the plot we have two interesting findings: 1. Compared to
+\textbf{International Relations}, \textbf{Immigration} and
+\textbf{Health Care \&COVID-19}, Biden's supporters are more likely to
+approve Trump's job in \textbf{Economy}. 2. Compared to
+\textbf{International Relations}, \textbf{Immigration} and
+\textbf{Economy}, Trump's supporters are more likely to disagree with
+Trump's policy about \textbf{Health Care \& COVID-19}.
+
+So, the findings show that some of the Biden's supporters approve
+Trump's policy in \textbf{Economy} and some of Trump's supporters
+dislike his policy in \textbf{Health Care \& COVID-19}. That's
+interesting. Why? Let's find out.
+
+\hypertarget{economy}{%
+\subsection{Economy}\label{economy}}
+
+\#\#\#Do people think the economy is getting better or worse?
+
+In the survey, people were asked that ``Compare to one year ago, whether
+you think that the nation's economy is now better, about the same, or
+worse?'' Here are different group of people's response.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{par}\NormalTok{(}\DataTypeTok{mfrow=}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{2}\NormalTok{),}\DataTypeTok{mar=}\KeywordTok{c}\NormalTok{(}\DecValTok{6}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{5}\NormalTok{,}\DecValTok{1}\NormalTok{))}
+\KeywordTok{hist}\NormalTok{(trump20}\OperatorTok{$}\NormalTok{econnow[trump20}\OperatorTok{$}\NormalTok{econnow}\OperatorTok{<=}\DecValTok{5}\NormalTok{],}\DataTypeTok{xlab =} \StringTok{'Response'}\NormalTok{,}\DataTypeTok{main =} \StringTok{'Trump'}\NormalTok{,}\DataTypeTok{cex.main=}\DecValTok{1}\NormalTok{,}\DataTypeTok{col=}\StringTok{"red"}\NormalTok{)}
+\KeywordTok{hist}\NormalTok{(biden20}\OperatorTok{$}\NormalTok{econnow[biden20}\OperatorTok{$}\NormalTok{econnow}\OperatorTok{<=}\DecValTok{5}\NormalTok{],}\DataTypeTok{xlab =} \StringTok{'Response'}\NormalTok{,}\DataTypeTok{main =} \StringTok{'Biden'}\NormalTok{,}\DataTypeTok{cex.main=}\DecValTok{1}\NormalTok{,}\DataTypeTok{col=}\StringTok{"blue"}\NormalTok{)}
+\KeywordTok{mtext}\NormalTok{(}\StringTok{"Economy is now better or worse?"}\NormalTok{,}\DataTypeTok{outer=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{cex =} \FloatTok{1.5}\NormalTok{,}\DataTypeTok{line=}\OperatorTok{-}\FloatTok{1.5}\NormalTok{)}
+\KeywordTok{mtext}\NormalTok{(}\StringTok{"1-Much better, 2-Somewhat better, 3-About the same, 4-Somewhat worse, 5-Much worse"}\NormalTok{, }\DataTypeTok{outer=}\OtherTok{TRUE}\NormalTok{,}\DataTypeTok{cex =} \FloatTok{.8}\NormalTok{,}\DataTypeTok{line=}\OperatorTok{-}\FloatTok{21.5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{How-do-trump-supporters-think-about-the-economics_files/figure-latex/unnamed-chunk-5-1.pdf}
+
+This comparison shows that most of the Biden's supporters think that the
+economy is much worse than one year ago, While Trump's supporters'
+opinions are more likely to split evenly on different thoughts.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{par}\NormalTok{(}\DataTypeTok{mfrow=}\KeywordTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{,}\DecValTok{2}\NormalTok{),}\DataTypeTok{mar=}\KeywordTok{c}\NormalTok{(}\DecValTok{3}\NormalTok{,}\DecValTok{3}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{0}\NormalTok{))}
+\KeywordTok{hist}\NormalTok{(trump20}\OperatorTok{$}\NormalTok{finworry[trump20}\OperatorTok{$}\NormalTok{finworry}\OperatorTok{<=}\DecValTok{5}\NormalTok{],}\DataTypeTok{xlab =} \StringTok{'Response'}\NormalTok{,}\DataTypeTok{main =} \StringTok{'Trump'}\NormalTok{,}\DataTypeTok{cex.main=}\DecValTok{1}\NormalTok{,}\DataTypeTok{col=}\StringTok{"red"}\NormalTok{)}
+\KeywordTok{hist}\NormalTok{(biden20}\OperatorTok{$}\NormalTok{finworry[biden20}\OperatorTok{$}\NormalTok{finworry}\OperatorTok{<=}\DecValTok{5}\NormalTok{],}\DataTypeTok{xlab =} \StringTok{'Response'}\NormalTok{,}\DataTypeTok{main =} \StringTok{'Biden'}\NormalTok{,}\DataTypeTok{cex.main=}\DecValTok{1}\NormalTok{,}\DataTypeTok{col=}\StringTok{"blue"}\NormalTok{)}
+
+\KeywordTok{hist}\NormalTok{(trump20}\OperatorTok{$}\NormalTok{confecon[trump20}\OperatorTok{$}\NormalTok{confecon}\OperatorTok{<=}\DecValTok{5}\NormalTok{],}\DataTypeTok{xlab =} \StringTok{'Response'}\NormalTok{,}\DataTypeTok{main =} \StringTok{'Trump'}\NormalTok{,}\DataTypeTok{cex.main=}\DecValTok{1}\NormalTok{,}\DataTypeTok{col=}\StringTok{"red"}\NormalTok{)}
+\KeywordTok{hist}\NormalTok{(biden20}\OperatorTok{$}\NormalTok{confecon[biden20}\OperatorTok{$}\NormalTok{confecon}\OperatorTok{<=}\DecValTok{5}\NormalTok{],}\DataTypeTok{xlab =} \StringTok{'Response'}\NormalTok{,}\DataTypeTok{main =} \StringTok{'Biden'}\NormalTok{,}\DataTypeTok{cex.main=}\DecValTok{1}\NormalTok{,}\DataTypeTok{col=}\StringTok{"blue"}\NormalTok{)}
+
+\KeywordTok{mtext}\NormalTok{(}\StringTok{"1 - Not at all worried, 2 - A little worried, 3 - Moderately worried, 4 - Very worried, 5 - Extremely worried"}\NormalTok{, }\DataTypeTok{cex =} \FloatTok{.7}\NormalTok{,}\DataTypeTok{line =} \FloatTok{-9.5}\NormalTok{, }\DataTypeTok{adj=}\FloatTok{1.3}\NormalTok{)}
+\KeywordTok{mtext}\NormalTok{(}\StringTok{"The level of worry about people's current financial situation"}\NormalTok{, }\DataTypeTok{cex =} \DecValTok{1}\NormalTok{,}\DataTypeTok{line=}\OperatorTok{+}\DecValTok{16}\NormalTok{,}\DataTypeTok{adj=}\FloatTok{2.1}\NormalTok{)}
+\KeywordTok{mtext}\NormalTok{(}\StringTok{"The level of worry about the national economy"}\NormalTok{, }\DataTypeTok{cex =} \DecValTok{1}\NormalTok{,}\DataTypeTok{line=}\OperatorTok{+}\FloatTok{3.5}\NormalTok{,}\DataTypeTok{adj=}\DecValTok{16}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{How-do-trump-supporters-think-about-the-economics_files/figure-latex/unnamed-chunk-6-1.pdf}
+
+In addition, Biden's supporters are concerned about both their current
+financial situation and the national economy, while Trump's supporters
+are less concerned about their current financial situation but more
+concerned about the national economy.
+
+Maybe it is because Trump's supporters are richer than Biden's. Let's
+take a look at their income levels.
+
+\hypertarget{income-level-and-the-income-differences-between-the-rich-and-the-poor.}{%
+\subsubsection{Income level and the income differences between the rich
+and the
+poor.}\label{income-level-and-the-income-differences-between-the-rich-and-the-poor.}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{par}\NormalTok{(}\DataTypeTok{mfrow=}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{2}\NormalTok{),}\DataTypeTok{mar=}\KeywordTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{0}\NormalTok{))}
+\KeywordTok{hist}\NormalTok{(}\KeywordTok{ifelse}\NormalTok{(trump20}\OperatorTok{$}\NormalTok{inc_anes}\OperatorTok{==}\DecValTok{66}\NormalTok{, }\KeywordTok{ifelse}\NormalTok{(trump20}\OperatorTok{$}\NormalTok{inc_cps}\OperatorTok{==}\DecValTok{66}\NormalTok{,trump20}\OperatorTok{$}\NormalTok{inc_cpsmod,trump20}\OperatorTok{$}\NormalTok{inc_cps),trump20}\OperatorTok{$}\NormalTok{inc_anes),}\DataTypeTok{xlim=}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{30}\NormalTok{),}\DataTypeTok{breaks=}\DecValTok{25}\NormalTok{,}\DataTypeTok{xlab=}\StringTok{''}\NormalTok{,}\DataTypeTok{main=}\StringTok{'Trump'}\NormalTok{,}\DataTypeTok{col=}\StringTok{"red"}\NormalTok{)}
+\KeywordTok{hist}\NormalTok{(}\KeywordTok{ifelse}\NormalTok{(biden20}\OperatorTok{$}\NormalTok{inc_anes}\OperatorTok{==}\DecValTok{66}\NormalTok{, }\KeywordTok{ifelse}\NormalTok{(biden20}\OperatorTok{$}\NormalTok{inc_cps}\OperatorTok{==}\DecValTok{66}\NormalTok{,biden20}\OperatorTok{$}\NormalTok{inc_cpsmod,biden20}\OperatorTok{$}\NormalTok{inc_cps),biden20}\OperatorTok{$}\NormalTok{inc_anes),}\DataTypeTok{xlim=}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{30}\NormalTok{),}\DataTypeTok{breaks=}\DecValTok{25}\NormalTok{,}\DataTypeTok{xlab=}\StringTok{''}\NormalTok{,}\DataTypeTok{main=}\StringTok{'Biden'}\NormalTok{,}\DataTypeTok{col=}\StringTok{"blue"}\NormalTok{)}
+\KeywordTok{mtext}\NormalTok{(}\StringTok{"The anual income levels"}\NormalTok{, }\DataTypeTok{cex =} \DecValTok{1}\NormalTok{,}\DataTypeTok{line=}\OperatorTok{+}\DecValTok{3}\NormalTok{,}\DataTypeTok{adj=}\OperatorTok{-}\FloatTok{1.4}\NormalTok{)}
+\KeywordTok{mtext}\NormalTok{(}\StringTok{"[1-5] (Under $24,999), [6-10] - ($25,000 - $49,999), [11-15] - ($50,000 - $74,999), [16-20] - ($75,000 - $99,999), [21-25] - ($100,000 - $249,999), [26-30] - ($250,000 or more)"}\NormalTok{,}\DataTypeTok{cex=}\FloatTok{0.5}\NormalTok{,}\DataTypeTok{line =} \DecValTok{-18}\NormalTok{,}\DataTypeTok{adj=}\OperatorTok{+}\FloatTok{1.1}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{How-do-trump-supporters-think-about-the-economics_files/figure-latex/unnamed-chunk-7-1.pdf}
+
+From the plot, we can tell that there are more low-income people are
+supporting Biden. This supports the previous argument.
+
+What worth mentioning is that from analyzing the data, we find that
+Biden's supporters agree more on that the government should pass laws
+and regulations to reduce the income differences between rich people and
+poor people. The argument is also supported by the previous argument
+that Trump's supporters are richer than Biden's supporters.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{par}\NormalTok{(}\DataTypeTok{mfrow=}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{2}\NormalTok{))}
+\KeywordTok{hist}\NormalTok{(trump20}\OperatorTok{$}\NormalTok{richpoor2[trump20}\OperatorTok{$}\NormalTok{richpoor2}\OperatorTok{<=}\DecValTok{5}\NormalTok{],}\DataTypeTok{xlab=}\StringTok{''}\NormalTok{,}\DataTypeTok{main=}\StringTok{'Trump'}\NormalTok{,}\DataTypeTok{col=}\StringTok{"red"}\NormalTok{,}\DataTypeTok{cex.main=}\NormalTok{.}\DecValTok{7}\NormalTok{)}
+\KeywordTok{hist}\NormalTok{(biden20}\OperatorTok{$}\NormalTok{richpoor2[biden20}\OperatorTok{$}\NormalTok{richpoor2}\OperatorTok{<=}\DecValTok{5}\NormalTok{],}\DataTypeTok{xlab=}\StringTok{''}\NormalTok{,}\DataTypeTok{main=}\StringTok{'Biden'}\NormalTok{,}\DataTypeTok{col=}\StringTok{"Blue"}\NormalTok{,}\DataTypeTok{cex.main=}\NormalTok{.}\DecValTok{7}\NormalTok{)}
+
+\KeywordTok{mtext}\NormalTok{(}\StringTok{"The importance of reducing income differences"}\NormalTok{, }\DataTypeTok{cex =} \DecValTok{1}\NormalTok{,}\DataTypeTok{line=}\OperatorTok{+}\FloatTok{1.3}\NormalTok{,}\DataTypeTok{adj=}\OperatorTok{+}\FloatTok{2.2}\NormalTok{)}
+\KeywordTok{mtext}\NormalTok{(}\StringTok{"1 - Extremely important, 2 - Very important, 3 - Moderately important, 4 - A little important, 5 - Not at all important"}\NormalTok{,}\DataTypeTok{cex=}\NormalTok{.}\DecValTok{8}\NormalTok{,}\DataTypeTok{line =} \DecValTok{-19}\NormalTok{,}\DataTypeTok{adj=}\OperatorTok{+}\DecValTok{1}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{How-do-trump-supporters-think-about-the-economics_files/figure-latex/unnamed-chunk-8-1.pdf}
+
+Besides the findings about the difference of income levels and the
+difference of the attitude towards income differences, we find more
+interesting aspects that can explain why the Biden's supporters agree
+more on Trump's economy policy than other fields.
+
+\hypertarget{free-market-or-strong-government}{%
+\subsubsection{Free market or strong
+government}\label{free-market-or-strong-government}}
+
+In the survey, people are asked to share their opinions about which one
+do they prefer, let the free market handle the economic problems or let
+strong government to handle them.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{par}\NormalTok{(}\DataTypeTok{mfrow=}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{2}\NormalTok{))}
+\KeywordTok{hist}\NormalTok{(trump20}\OperatorTok{$}\NormalTok{freemkt1a[trump20}\OperatorTok{$}\NormalTok{freemkt1a}\OperatorTok{<=}\DecValTok{2}\NormalTok{],}\DataTypeTok{breaks=}\DecValTok{2}\NormalTok{,}\DataTypeTok{main=}\StringTok{'Trump'}\NormalTok{,}\DataTypeTok{col=}\StringTok{"red"}\NormalTok{,}\DataTypeTok{cex.main=}\NormalTok{.}\DecValTok{7}\NormalTok{,}\DataTypeTok{xlab=}\StringTok{''}\NormalTok{,}\DataTypeTok{xaxt=}\StringTok{'n'}\NormalTok{,)}
+\KeywordTok{hist}\NormalTok{(biden20}\OperatorTok{$}\NormalTok{freemkt1a[biden20}\OperatorTok{$}\NormalTok{freemkt1a}\OperatorTok{<=}\DecValTok{2}\NormalTok{],}\DataTypeTok{breaks=}\DecValTok{2}\NormalTok{,}\DataTypeTok{main=}\StringTok{'Biden'}\NormalTok{,}\DataTypeTok{col=}\StringTok{"Blue"}\NormalTok{,}\DataTypeTok{cex.main=}\NormalTok{.}\DecValTok{7}\NormalTok{,}\DataTypeTok{xlab=}\StringTok{''}\NormalTok{,}\DataTypeTok{xaxt=}\StringTok{'n'}\NormalTok{)}
+\KeywordTok{mtext}\NormalTok{(}\StringTok{"Free Market VS Strong Market"}\NormalTok{, }\DataTypeTok{cex =} \DecValTok{1}\NormalTok{,}\DataTypeTok{line=}\OperatorTok{+}\FloatTok{1.3}\NormalTok{,}\DataTypeTok{adj=}\OperatorTok{-}\DecValTok{10}\NormalTok{)}
+\KeywordTok{mtext}\NormalTok{(}\StringTok{"Government"}\NormalTok{,}\DataTypeTok{cex=}\DecValTok{1}\NormalTok{,}\DataTypeTok{line =} \DecValTok{-10}\NormalTok{,}\DataTypeTok{adj=}\OperatorTok{-}\FloatTok{2.25}\NormalTok{,}\DataTypeTok{col=}\StringTok{"white"}\NormalTok{)}
+\KeywordTok{mtext}\NormalTok{(}\StringTok{"Free market"}\NormalTok{,}\DataTypeTok{cex=}\DecValTok{1}\NormalTok{,}\DataTypeTok{line =} \DecValTok{-10}\NormalTok{,}\DataTypeTok{adj=}\OperatorTok{-}\FloatTok{1.5}\NormalTok{,}\DataTypeTok{col=}\StringTok{"white"}\NormalTok{)}
+\KeywordTok{mtext}\NormalTok{(}\StringTok{"Government"}\NormalTok{,}\DataTypeTok{cex=}\DecValTok{1}\NormalTok{,}\DataTypeTok{line =} \DecValTok{-10}\NormalTok{,}\DataTypeTok{adj=}\OperatorTok{+}\NormalTok{.}\DecValTok{13}\NormalTok{,}\DataTypeTok{col=}\StringTok{"white"}\NormalTok{)}
+\KeywordTok{mtext}\NormalTok{(}\StringTok{"Free market"}\NormalTok{,}\DataTypeTok{cex=}\DecValTok{1}\NormalTok{,}\DataTypeTok{line =} \DecValTok{-14}\NormalTok{,}\DataTypeTok{adj=}\OperatorTok{+}\NormalTok{.}\DecValTok{87}\NormalTok{,}\DataTypeTok{col=}\StringTok{"white"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{How-do-trump-supporters-think-about-the-economics_files/figure-latex/unnamed-chunk-9-1.pdf}
+
+According to the plot, Biden's supporters prefer more about a strong
+government. And it's a fact that during the last four years, Trump took
+many actions on economy. So, it supports the previous argument that
+Biden's supporters agree more on Trump's economy policy than other
+fields.
+
+\hypertarget{health-care-covid-19}{%
+\subsection{Health Care \& COVID-19}\label{health-care-covid-19}}
+
+In the previous part of the analysis, we find that some of Trump's
+supporters dislike his policy in \textbf{Health Care \& COVID-19}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{par}\NormalTok{(}\DataTypeTok{mfrow=}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{2}\NormalTok{),}\DataTypeTok{mar=}\KeywordTok{c}\NormalTok{(}\DecValTok{6}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{5}\NormalTok{,}\DecValTok{1}\NormalTok{))}
+\KeywordTok{hist}\NormalTok{(trump20}\OperatorTok{$}\NormalTok{covid1[trump20}\OperatorTok{$}\NormalTok{covid1}\OperatorTok{<=}\DecValTok{5}\NormalTok{],}\DataTypeTok{xlab =} \StringTok{'Response'}\NormalTok{,}\DataTypeTok{main =} \StringTok{'Trump'}\NormalTok{,}\DataTypeTok{cex.main=}\DecValTok{1}\NormalTok{,}\DataTypeTok{col=}\StringTok{"red"}\NormalTok{)}
+\KeywordTok{hist}\NormalTok{(biden20}\OperatorTok{$}\NormalTok{covid1[biden20}\OperatorTok{$}\NormalTok{covid1}\OperatorTok{<=}\DecValTok{5}\NormalTok{],}\DataTypeTok{xlab =} \StringTok{'Response'}\NormalTok{,}\DataTypeTok{main =} \StringTok{'Biden'}\NormalTok{,}\DataTypeTok{cex.main=}\DecValTok{1}\NormalTok{,}\DataTypeTok{col=}\StringTok{"blue"}\NormalTok{)}
+\KeywordTok{mtext}\NormalTok{(}\StringTok{"How worried are you about getting COVID-19?"}\NormalTok{,}\DataTypeTok{outer=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{cex =} \FloatTok{1.5}\NormalTok{,}\DataTypeTok{line=}\OperatorTok{-}\FloatTok{1.5}\NormalTok{)}
+\KeywordTok{mtext}\NormalTok{(}\StringTok{"1 - Extremely worried, 2 - Very worried, 3 - Moderately worried, 4 - A little worried, 5 - Not at all worried"}\NormalTok{, }\DataTypeTok{outer=}\OtherTok{TRUE}\NormalTok{,}\DataTypeTok{cex =} \FloatTok{.8}\NormalTok{,}\DataTypeTok{line=}\OperatorTok{-}\DecValTok{22}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{How-do-trump-supporters-think-about-the-economics_files/figure-latex/unnamed-chunk-10-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{par}\NormalTok{(}\DataTypeTok{mfrow=}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{2}\NormalTok{),}\DataTypeTok{mar=}\KeywordTok{c}\NormalTok{(}\DecValTok{6}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{5}\NormalTok{,}\DecValTok{1}\NormalTok{))}
+\KeywordTok{hist}\NormalTok{(trump20}\OperatorTok{$}\NormalTok{hlthcare1[trump20}\OperatorTok{$}\NormalTok{hlthcare1}\OperatorTok{<=}\DecValTok{7}\NormalTok{],}\DataTypeTok{xlab =} \StringTok{'Response'}\NormalTok{,}\DataTypeTok{main =} \StringTok{'Trump'}\NormalTok{,}\DataTypeTok{cex.main=}\DecValTok{1}\NormalTok{,}\DataTypeTok{col=}\StringTok{"red"}\NormalTok{,}\DataTypeTok{breaks =} \DecValTok{10}\NormalTok{)}
+\KeywordTok{hist}\NormalTok{(biden20}\OperatorTok{$}\NormalTok{hlthcare1[biden20}\OperatorTok{$}\NormalTok{hlthcare1}\OperatorTok{<=}\DecValTok{7}\NormalTok{],}\DataTypeTok{xlab =} \StringTok{'Response'}\NormalTok{,}\DataTypeTok{main =} \StringTok{'Biden'}\NormalTok{,}\DataTypeTok{cex.main=}\DecValTok{1}\NormalTok{,}\DataTypeTok{col=}\StringTok{"blue"}\NormalTok{,}\DataTypeTok{breaks =} \DecValTok{10}\NormalTok{)}
+\KeywordTok{mtext}\NormalTok{(}\StringTok{"Do you favor that the government is responsible for paying for the health care of all Americans?"}\NormalTok{,}\DataTypeTok{outer=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{cex =} \DecValTok{1}\NormalTok{,}\DataTypeTok{line=}\OperatorTok{-}\FloatTok{1.5}\NormalTok{)}
+\KeywordTok{mtext}\NormalTok{(}\StringTok{"1 - Favor a great deal, 2 - Favor a moderate amount, 3 - Favor a little, 4 - Neither favor nor oppose, 5 - Oppose a little}
+\StringTok{       6 - Oppose a moderate amount, 7 - Oppose a great deal"}\NormalTok{, }\DataTypeTok{outer=}\OtherTok{TRUE}\NormalTok{,}\DataTypeTok{cex =} \FloatTok{.8}\NormalTok{,}\DataTypeTok{line=}\OperatorTok{-}\FloatTok{22.5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{How-do-trump-supporters-think-about-the-economics_files/figure-latex/unnamed-chunk-11-1.pdf}
+
+\#Conclusion
+
+From the survey, we learn about some interesting findings.
+
+\hypertarget{what-do-american-think-about-the-trumps-work-in-the-last-four-years.}{%
+\subsection{What do american think about the Trump's work in the last
+four
+years.}\label{what-do-american-think-about-the-trumps-work-in-the-last-four-years.}}
+
+\end{document}

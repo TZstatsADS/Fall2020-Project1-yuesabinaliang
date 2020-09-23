@@ -10,8 +10,8 @@ library(dplyr)
 library(ggplot2)
 library(gplots)
 library(plot.matrix)
-pilot_data<-read.csv( "../data/anes_pilot_2020ets_csv.csv")
-trump20=pilot_data[pilot_data$vote20jb==1,]
+pilot_data<-read.csv( "../data/anes_pilot_2020ets_csv.csv") #import data
+trump20=pilot_data[pilot_data$vote20jb==1,] 
 biden20=pilot_data[pilot_data$vote20jb==2,]
 ```
 
@@ -29,21 +29,23 @@ As we see the plot below, which shows us who people voted for in 2016 and will v
 However, some people have changed their minds. From the plot we can see, more people change from Trump's camp to Biden's than from Biden's group to Trump's. But some of the Biden's camp leave to someone else's camp. Worth mentioning, Biden attracts more people who quit voting in 2016 to his camp this year than Trump does. 
 
 ```{r}
-vote_freq<-as.data.frame(table(pilot_data[,c('vote16','vote20jb')]))
-total16<-as.data.frame(table(pilot_data[,c('vote16')]))
+vote_freq<-as.data.frame(table(pilot_data[,c('vote16','vote20jb')])) # gain the frequency of groups of people.
+total16<-as.data.frame(table(pilot_data[,c('vote16')])) # count the total number of people vote in different categories.
 vote_heat<-as.data.frame(matrix(c(vote_freq[vote_freq$vote20jb==1,'Freq'],
              vote_freq[vote_freq$vote20jb==2,'Freq'],
              vote_freq[vote_freq$vote20jb==3,'Freq'],
              vote_freq[vote_freq$vote20jb==4,'Freq'],
-             vote_freq[vote_freq$vote20jb==9,'Freq']),5,5))[1:4,1:4]
+             vote_freq[vote_freq$vote20jb==9,'Freq']),5,5))[1:4,1:4] # calculate the 
 vote_heat[1,]<-vote_heat[1,]/total16[1,2]*100
 vote_heat[2,]<-vote_heat[2,]/total16[2,2]*100
 vote_heat[3,]<-vote_heat[3,]/total16[3,2]*100
 vote_heat[4,]<-vote_heat[4,]/total16[4,2]*100
+# calculate the percentage of people based on their votes in 2016 and 2020.
 colnames(vote_heat)<-c('Trump_20','Biden_20','Else_20','Quit_20')
 rownames(vote_heat)<-c('Trump_16','Clinton_16','Else_16','Quit_16')
 par(mar=c(5.1,4.1,4.1,4.1))
 plot(as.matrix(vote_heat),col = colorRampPalette(c("white","red")),breaks=1000,fmt.cell='%.2f',text.cell = list(cex=1),key=NULL,cex.axis=.75,axis.row = list(las=1),ylab='',xlab='',main='What is the current attitude of Americans who voted in 2016? (%)')
+#plot the heatmap.
 ```
 
 

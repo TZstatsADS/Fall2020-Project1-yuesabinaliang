@@ -16,7 +16,7 @@ biden20=pilot_data[pilot_data$vote20jb==2,]
 ```
 
 
-# Information about the data.
+# Information about the data
 
 As the election 2020 is closer, the competition between Trump and Biden is becoming a hot topic in this special years. People all over the world pay attention on the results.
 This year many new issues happened, such as COVID-19, Black lives matters protest. We are conducting the data analysis using the **2020 Exploratory Testing Survey** dataset from ANES(American National Election Studies). Because the survey contains the information on the novel issues arising in the election year.The pilot study was conducted via internet between Apr 10 and Apr 18. The survey collected 3,080 sample data. See more detail [here](https://electionstudies.org/data-center/2020-exploratory-testing-survey/).

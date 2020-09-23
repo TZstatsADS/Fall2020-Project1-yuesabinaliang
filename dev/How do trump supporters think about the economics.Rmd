@@ -18,13 +18,13 @@ biden20=pilot_data[pilot_data$vote20jb==2,]
 
 # Information about the data
 
-As the election 2020 is closer, the competition between Trump and Biden is becoming a hot topic in this special years. People all over the world pay attention on the results.
-This year many new issues happened, such as COVID-19, Black lives matters protest. We are conducting the data analysis using the **2020 Exploratory Testing Survey** dataset from ANES(American National Election Studies). Because the survey contains the information on the novel issues arising in the election year.The pilot study was conducted via internet between Apr 10 and Apr 18. The survey collected 3,080 sample data. See more detail [here](https://electionstudies.org/data-center/2020-exploratory-testing-survey/).
+As the election 2020 is closer, the competition between Trump and Biden is becoming a hot topic in this special year. People all over the world pay attention to the results.
+This year many new issues happened, such as COVID-19, Black lives matters protest. We are conducting the data analysis using the **2020 Exploratory Testing Survey** dataset from ANES(American National Election Studies). Because the survey contains information on the novel issues arising in the election year. The pilot study was conducted via the internet between Apr 10 and Apr 18. The survey collected 3,080 sample data. See more detail [here](https://electionstudies.org/data-center/2020-exploratory-testing-survey/).
 
 From analyzing the data, we draw some interesting conclusions. Let's find out!
 
 # How many people have changed their minds?
-As we see the plot below, which shows us who people voted for in 2016 and will vote this year, we can draw a conclusion that most of the people keep a stand. Especially, Trump remain 87.86% of his supporter to support him this year again, while Biden remain 87.48%, which is less, of Clinton's supporter to support him this year.
+As we see the plot below, which shows us who people voted for in 2016 and will vote this year, we can draw a conclusion that most of the people keep a stand. Especially, Trump remainS 87.86% of his supporter to support him this year again, while Biden remainS 87.48%, which is less, of Clinton's supporter to support him this year.
 
 However, some people have changed their minds. From the plot we can see, more people change from Trump's camp to Biden's than from Biden's group to Trump's. But some of the Biden's camp leave to someone else's camp. Worth mentioning, Biden attracts more people who quit voting in 2016 to his camp this year than Trump does. 
 
@@ -68,7 +68,7 @@ mtext("1 - Approve extremely strongly, 2 - Approve moderately strongly, 3 - Appr
 ```
 
 
-From the plot, we see that more Trump's supporters approve Trump's job moderately, while Biden's supporters disapprove Trump's job extremely.
+From the plot, we see that more Trump's supporters approve Trump's job moderately, while Biden's supporters disapprove of Trump's job extremely.
 
 What about people's opinions on Trump's job about **International Relations**, **Immigration**, **Economy** and **Health Care & Covid-19**?
 The survey asked people to express their opinions and we can see the difference as the plot below.
@@ -100,9 +100,9 @@ mtext("Health Care & Covid-19", cex = 1,line=1.2,adj=+5)
 
 From the plot we have two interesting findings:
 1. Compared to **International Relations**, **Immigration** and **Health Care &COVID-19**, Biden's supporters are more likely to approve Trump's job in **Economy**.
-2. Compared to **International Relations**, **Immigration** and **Economy**, Trump's supporters are more likely to disagree with Trump's policy about **Health Care & COVID-19**. 
+2. Compared to **International Relations**, **Immigration**, and **Economy**, Trump's supporters are more likely to disagree with Trump's policy about **Health Care & COVID-19**. 
 
-So, the findings show that some of the Biden's supporters approve Trump's policy in **Economy** and some of Trump's supporters dislike his policy in **Health Care & COVID-19**.
+So, the findings show that some of Biden's supporters approve Trump's policy in **Economy** and some of Trump's supporters dislike his policy in **Health Care & COVID-19**.
 That's interesting.
 Why?
 Let's find out.
@@ -113,7 +113,7 @@ Let's find out.
 ### Do people think the economy is getting better or worse?
 
 In the survey, people were asked that "Compare to one year ago, whether you think that the nation's economy is now better, about the same, or worse? "
-Here are different group of people's response.
+Here are different groups of people's responses.
 
 ```{r}
 par(mfrow=c(1,2),mar=c(6,4,5,1))
@@ -124,7 +124,7 @@ mtext("1-Much better, 2-Somewhat better, 3-About the same, 4-Somewhat worse, 5-M
 ```
 
 
-This comparison shows that most of the Biden's supporters think that the economy is much worse than one year ago, While Trump's supporters' opinions are more likely to split evenly on different thoughts.
+This comparison shows that most of Biden's supporters think that the economy is much worse than one year ago, While Trump's supporters' opinions are more likely to split evenly on different thoughts.
 
 
 ```{r}
@@ -175,11 +175,11 @@ mtext("1 - Extremely important, 2 - Very important, 3 - Moderately important, 4 
 
 ```
 
-Besides the findings about the difference of income levels and the difference of the attitude towards income differences, we find more interesting aspects that can explain why the Biden's supporters agree more on Trump's economy policy than other fields.
+Besides the findings of the difference of income levels and the difference of the attitude towards income differences, we find more interesting aspects that can explain why Biden's supporters agree more on Trump's economic policy than other fields.
 
 ### Free market or strong government 
 
-In the survey, people are asked to share their opinions about which one do they prefer, let the free market handle the economic problems or let strong government to handle them.
+In the survey, people are asked to share their opinions about which one do they prefer, let the free market handle the economic problems or let the strong government handle them.
 
 ```{r}
 par(mfrow=c(1,2))
@@ -192,14 +192,14 @@ mtext("Government",cex=1,line = -10,adj=+.13,col="white")
 mtext("Free market",cex=1,line = -14,adj=+.87,col="white")
 ```
 
-According to the plot, Biden's supporters prefer more about a strong government. And it's a fact that during the last four years, Trump took many actions on economy. So, it supports the previous argument that Biden's supporters agree more on Trump's economy policy than other fields.
+According to the plot, Biden's supporters prefer more about a strong government. And it's a fact that during the last four years, Trump took many actions on the economy. So, it supports the previous argument that Biden's supporters agree more on Trump's economic policy than other fields.
 
 
 ## Health Care & COVID-19
 
 In the previous part of the analysis, we find that some of Trump's supporters dislike his policy in **Health Care & COVID-19**.
 
-Let's take a look at what do American think about the Health Care and COVID-19.
+Let's take a look at what do Americans think about Health Care and COVID-19.
 
 In the survey, we find that Trump's supporters are not as worried about their chances of getting COVID-19 as Biden's supporters.
 See the following plot.
@@ -212,10 +212,11 @@ mtext("How worried are you about getting COVID-19?",outer=TRUE, cex = 1.5,line=-
 mtext("1 - Extremely worried, 2 - Very worried, 3 - Moderately worried, 4 - A little worried, 5 - Not at all worried", outer=TRUE,cex = .8,line=-24)
 ```
 
-However, it shows a big difference between Trump's supporters and Biden's supporters about their attitude towards whether government should pay for the health care of all Americans.
-Trump's camp oppose the idea a great deal, while a few of them do favor the idea. In the opposite, Biden's supporters favor the idea a great deal.
+However, it shows a big difference between Trump's supporters and Biden's supporters about their attitude towards whether the government should pay for the health care of all Americans.
 
-The reason behind this maybe their difference in income.
+Trump's supporters oppose the idea a great deal, while a few of them do favor the idea. On the opposite, Biden's supporters favor the idea a great deal.
+
+The reason behind this may be their difference in income.
 
 ```{r}
 par(mfrow=c(1,2),mar=c(6,4,5,1))
@@ -232,21 +233,21 @@ mtext("1 - Favor a great deal, 2 - Favor a moderate amount, 3 - Favor a little, 
 From the survey, we learn about some interesting findings.
 
 1. With a heatmap showing the percentage of people and their voting in 2016 and 2020, we find some ideas:
-   + There are a few people changed their minds during the four years, while most of them keep a stand. 
+   + A few people changed their minds during the four years, while most of the people keep a stand. 
    + Comparing the two major candidates, Trump and Biden, we find that Biden is more attractive to those who quit voting in 2016 and those who vote someone else other than Clinton and Trump in 2016, however, Trump has a slightly higher possibility to keep most of the people who voted him in 2016 voting him again this year.
 
 2. Although it is obvious that Trump's supporters tend to favor Trump's job as the president in the last four years, we find something interesting.
-   + Biden's supporters seem to favor Trump's economy policy more than policy in other aspects, like Immigration, International Relations and Health Care & COVID-19.
-   + Trump's supporters are more likely to disagree the policy in Health Care & COVID-19 than policy in other aspects.
+   + Biden's supporters seem to favor Trump's economic policy more than policy in other aspects, like Immigration, International Relations, and Health Care & COVID-19.
+   + Trump's supporters are more likely to disagree with the policy in Health Care & COVID-19 than policy in other aspects.
 
-3. As we focus on the economy field, we find out the reason of the previous part.
-   + Both group of people tend to believe that the economy is worse than the last year.
+3. As we focus on the economic field, we find out the reason for the previous part.
+   + Both groups of people tend to believe that the economy is worse than the last year.
    + Biden's supporters are more likely to be worried about both their current financial situation and the national economy, while Trump's supporters are more likely to be worried about the national economy than their current financial.
    + We find evidence that Biden's supporters have a larger group of people with lower annual income than Trump's supporters, which supports the previous point.
-   + Also, there is a difference between the two groups of people's opinion on whether government should pay attention on reducing income differences between the poor and the rich. Biden's supporters are more likely to favor the idea that government should pass regulations and laws to reduce the income differences than the other group of people. The reason of it maybe the fact that Trump's supporters are richer than Biden's, stated as the previous point.
-   + Trump's supporters favor free market more than Biden's supporters. This could explain the reason of the point stated in the point 2 that Biden's supporters favor Trump's economy policy more. Because during the last four years, Trump took many actions on governing the economy, and Biden's supporters favor a stronger government than a free market to handel the economic problems.
+   + Also, there is a difference between the two groups of people's opinions on whether the government should pay attention on reducing income differences between the poor and the rich. Biden's supporters are more likely to favor the idea that the government should pass regulations and laws to reduce the income differences than the other group of people. The reason for it may be the fact that Trump's supporters are richer than Biden's, stated as the previous point.
+   + Trump's supporters favor the free market more than Biden's supporters. This could explain the reason for the point stated in point 2 that Biden's supporters favor Trump's economic policy more. Because during the last four years, Trump took many actions on governing the economy, and Biden's supporters favor a stronger government than a free market to handle the economic problems.
 
-4. The two group of people show some differences on the Health Care & COVID-19 field.
+4. The two groups of people show some differences in the Health Care & COVID-19 field.
    + Biden's supporters are worried about getting COVID-19.
    + Biden's supporters agree with the idea that government should be responsible for paying the health care for all Americans, while most of the Trump's supporters extremely oppose the idea.
 

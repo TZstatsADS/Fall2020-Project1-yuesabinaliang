@@ -1,6 +1,9 @@
 ---
-title: 'What do supporters of Trump and Biden think about Trump as the president in the last four years?'
-output: html_document
+title: What do supporters of Trump and Biden think about Trump as the president in
+  the last four years?
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r,include=FALSE}

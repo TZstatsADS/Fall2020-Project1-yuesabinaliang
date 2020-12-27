@@ -18,7 +18,7 @@ Term: Fall 2020
 
   Overall, Trump’s supporters approve Trump’s job moderately, while Biden’s supporters disapprove of Trump’s job extremely. In terms of economics, most of Biden’s supporters think that the economy is much worse than one year ago, While Trump’s supporters’ opinions are more likely to split evenly on different thoughts. In terms of Health Care & COVID-19, Trump’s supporters are not as worried about their chances of getting COVID-19 as Biden’s supporters. Also, Trump’s supporters oppose the idea of government should pay for the health care of all Americans a great deal, while Biden’s supporters favor the idea a great deal.
 
-  See more detail [here](https://github.com/TZstatsADS/Fall2020-Project1-yuesabinaliang/blob/master/dev/How-do-trump-supporters-think-about-the-economics.html).
+  See more detail [here](https://github.com/TZstatsADS/Fall2020-Project1-yuesabinaliang/blob/master/dev/Trump-s-Biden-sSupporters-ThoughtAboutTrump-sWork.pdf).
 
 Following [suggestions](http://nicercode.github.io/blog/2013-04-05-projects/) by [RICH FITZJOHN](http://nicercode.github.io/about/#Team) (@richfitz). This folder is orgarnized as follows.
 
